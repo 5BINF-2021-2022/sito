@@ -12194,3 +12194,6 @@ textarea.form-control-lg {
   width: 4rem;
   font-size: 2rem;
 }
+.argomento:hover{
+  background-color: rgb(221, 232, 235);
+}

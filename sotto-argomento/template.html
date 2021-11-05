@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="../css/styles.css" rel="stylesheet" />
+
     <!--Modifica del titolo in base all'argomento inizio-->
     <title>Template</title>
     <!--Modifica del titolo in base all'argomento fine-->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
 </head>
 <body>
     <!-- Responsive navbar-->
@@ -28,12 +34,14 @@
         <div class="container px-lg-5">
             <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
                 <div class="m-4 m-lg-5" id="inizio">
+                    <!--DA QUI INIZIA LA MODIFICA-->
+
                     <!--INSERIRE LE MODIFICHE ESCLUSIVAMENTE ALL'INTERNO DI QUESTO DIV SENZA MODIFICARNE GLI ATTRIBUTI E I TAG-->
                     <!--Utilizzare esclusivamente i template forniti, non usare tag creati da zero. Moficare solamente quelli già esistenti o copiarli
                     se si vuole aggiungere altro-->
                     <!--Per ulteriori invformazioni consultare il sito: https://www.w3schools.com/html/default.asp -->
 
-                    <!--Titolo (modificare anche titolo della pagina a riga 8) inizio-->
+                    <!--Titolo (modificare anche titolo della pagina a riga 9) inizio-->
                     <h1 class="display-5 fw-bold">Demo Pagina - Titolo di Esempio</h1>
                     <!--Titolo Fine-->
 
@@ -62,21 +70,24 @@
                     </p>
                     <!--Testo (paragrafo) fine-->
 
-                    <!--Inserimento di un immagine inizio-->
-                    <img id="test" class="img-fluid" src="../sotto-argomento/photos/test2.jpg" alt="esempio di immagne">
+                    <!--Inserimento di un immagine inizio (ci sono 2 tag per le immagini, se ne volete una copiate solo uno dei tag)-->
+                        <!--NB: Le immagini vanno inserite nella cartella photos, devono essere jpg - jpeg - png, 
+                            dovrete modificare il percorso con il nome dell'immagine inserita-->
+                        <!--NBB: Il tag alt="esempio di immagine" serve a ripiazzare l'immagine nel caso non venisse caricata, 
+                            modificatelo con una scritta esplicativa dell'immagine fanculo-->
+                    <img id="test" class="img-fluid mt-2 mb-2" src="../sotto-argomento/photos/test.jpg" alt="esempio di immagne">
+                    <img id="test" class="img-fluid mt-2 mb-2" src="../sotto-argomento/photos/test2.jpg" alt="esempio di immagne">
                     <!--Inserimento di un immagine fine-->
+
+                    <!--QUI FINISCE LA MODIFICA-->
                 </div>
-                <a class="btn btn-primary btn-lg" href="#!"> < Precedente </a> <a class="btn btn-primary btn-lg" href="#!"> Successivo > </a>
+                <a class="btn btn-primary btn-lg" href="javascript:history.back()"> Precedente </a> <a class="btn btn-primary btn-lg" href="#!"> Successivo </a>
             </div>
         </div>
     </header>
     <!-- Footer-->
     <footer class="py-5 bg-dark">
-        <div class="container"><p class="m-0 text-center text-white">Made with ❤️ by 5BInfelici</p></div>
+        <div class="container"><p class="m-0 text-center text-white">Made with ❤️ by 5BInfelice</p></div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
 </body>
 </html>

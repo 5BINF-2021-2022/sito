@@ -7988,6 +7988,7 @@ textarea.form-control-lg {
 .bg-light {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  border-radius: 16px;
 }
 
 .bg-dark {
@@ -12193,4 +12194,8 @@ textarea.form-control-lg {
   height: 4rem;
   width: 4rem;
   font-size: 2rem;
+}
+.argomento:hover{
+  background-color: rgb(240, 240, 240);
+  border-radius: 16px;
 }

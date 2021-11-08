@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://gitcdn.link/repo/5BINF-2021-2022/sito/main/css/styles.css" rel="stylesheet" />
+
+    <!--Modifica del titolo in base all'argomento inizio-->
+    <title>Virtual Machines</title>
+    <!--Modifica del titolo in base all'argomento fine-->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="../../../index.html">Architetture di Sistemi Distribuiti</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="../../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="./fonti.html">Fonti</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="https://github.com/5BINF-2021-2022/sito" target="_blank">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.avoltapg.edu.it/" target="_blank">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-left">
+                <div class="m-4 m-lg-5" id="inizio">
+                    <!--DA QUI INIZIA LA MODIFICA-->
+
+                    <!--INSERIRE LE MODIFICHE ESCLUSIVAMENTE ALL'INTERNO DI QUESTO DIV SENZA MODIFICARNE GLI ATTRIBUTI E I TAG-->
+                    <!--Utilizzare esclusivamente i template forniti, non usare tag creati da zero. Moficare solamente quelli già esistenti o copiarli
+                    se si vuole aggiungere altro-->
+                    <!--Per ulteriori invformazioni consultare il sito: https://www.w3schools.com/html/default.asp -->
+
+                    <!--Titolo (modificare anche titolo della pagina a riga 9) inizio-->
+                    <h1 class="display-5 fw-bold">Come funzionano le Virtual Machine?</h1>
+                    <!--Titolo Fine-->
+
+                    <br/>
+                    <!--Sottotitolo inizio-->
+                    <h2 class="display-6">La Virtualizzazione</h2>
+                    <!--Sottotitolo fine-->
+
+                    <p class="fs-4">
+                        Le Macchine Virtuali (o Virtual Machine) sono dei computer separati che possono esistere sopra so stesso Hardware allo stesso momento (come da immagine).
+                    </p>
+
+                    <img id="test" class="img-fluid mt-2 mb-2 text-center" src="./photos/virtualizzazione.jpg" alt="esempio di layer di macchine virtuali">
+
+                    <p class="fs-4">
+                        <i><b>Ma com'è possibile tutto ciò?</b></i>
+                        Grazie alla virtualizzazione, processo che consente a tutti gli effetti di simulare hardware e funzionalità di esso.
+                        La virtualizzazione però richiede delle risorse per essere eseguita, poichè se la macchina crede di avere un processore con un determinato numero di core o
+                        un determinato quantitativo di ram, questi ultimi devono essere presenti e devono essere "prestati" alla VM (anche dinamicamente in base alla richiesta).
+                    </p>
+
+                    <br/>
+                    <h2 class="display-6">Gli Hypervisor</h2>
+                    
+                    <!--Testo (paragrafo) inizio-->
+                    <p class="fs-4">
+                        Il paragrafo precedente si è concluso con la richiesta di Hardware da parte delle macchine virtuali, tale richiesta viene soddisfatta <b>dall'Hypervisor.</b>
+                        <br></br>
+                        L'Hypervisor è un software indispensabile per il corretto funzionamento delle virtual machine poichè si occupa si gestire l'Hardware e di separare quello fisico da quello virtuale.
+                        <br></br>
+                        Gli Hypervisor si possono dividere in <b>2 tipologie</b> principali:
+                        <img id="test" class="img-fluid mt-2 mb-2 text-center" src="./photos/hypervisor.png" alt="immagine descrittiva degli hypervisor">
+                        <br/>
+                        <b>Tipo 1:</b>
+                        <br/>
+                        Questo tipo di Hypervisor non è accessibile tramite software come VirtualBox o VM Ware <i>(mentre è utilizzabile con Hyper-V e KVM).</i>
+                        Utilizza una virtualizzazione che <i><b>sfrutta direttamente l'hardware</b></i>, 
+                        infatti si pone tra il sistema operativo e l'Hardware 
+                        (che viene gestito proprio dall'Hypervisor e non dal Kernel utilizzato dall'OS).
+                        Questo tipo di Virtualizzazione viene definita Bare Metal poiche le 
+                        performance dell'HW nel sistema operativo virutalizzato sono al pari di quelle su un sistema host 
+                        <i>(la perdita di performance è circa del ~3/5%).</i>
+                        <br/>
+                        <b>Tipo 2:</b>
+                        <br/>
+                        Questo tipo di Hypervisor invece è più comune infatti è quello che sfruttano i software installabili comunemente,
+                        VirtualBox e VM Ware sono esempi famosi (che abbiamo anche utlizzato).
+                        <br/>
+                        Il compito di questa tipologia è lo stesso del Tipo 1, <i><b>la differenza principale sono le performance</b></i>, 
+                        poichè viene eseguito sopra al sistema operativo Host (cioè quello che effettivamente gestisce l'Hardware fisico) 
+                        e quindi l'Hypervisor deve fare delle richieste all'OS e non ha accesso diretto all'HW.
+                    </p>
+                    <!--Testo (paragrafo) fine-->
+
+                    <!--Inserimento di un immagine inizio (ci sono 2 tag per le immagini, se ne volete una copiate solo uno dei tag)-->
+                    <!--Inserimento di un immagine fine-->
+
+                    <!--QUI FINISCE LA MODIFICA-->
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-primary btn-lg" href="javascript:history.back()"> Precedente </a> <a class="btn btn-primary btn-lg" href="#!"> Successivo </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Footer-->
+    <footer class="py-5 mt-auto bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Made with ❤️ by 5BInfelice</p></div>
+    </footer>
+</body>
+</html>

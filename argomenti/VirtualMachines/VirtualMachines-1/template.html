@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://gitcdn.link/repo/5BINF-2021-2022/sito/main/css/styles.css" rel="stylesheet" />
+
+    <!--Modifica del titolo in base all'argomento inizio-->
+    <title>Virtual Machines</title>
+    <!--Modifica del titolo in base all'argomento fine-->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="../../../index.html">Architetture di Sistemi Distribuiti</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="../../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="./fonti.html">Fonti</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="https://github.com/5BINF-2021-2022/sito" target="_blank">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.avoltapg.edu.it/" target="_blank">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-left">
+                <div class="m-4 m-lg-5" id="inizio">
+                    <!--DA QUI INIZIA LA MODIFICA-->
+
+                    <!--INSERIRE LE MODIFICHE ESCLUSIVAMENTE ALL'INTERNO DI QUESTO DIV SENZA MODIFICARNE GLI ATTRIBUTI E I TAG-->
+                    <!--Utilizzare esclusivamente i template forniti, non usare tag creati da zero. Moficare solamente quelli già esistenti o copiarli
+                    se si vuole aggiungere altro-->
+                    <!--Per ulteriori informazioni consultare il sito: https://www.w3schools.com/html/default.asp -->
+
+                    <!--Titolo (modificare anche titolo della pagina a riga 9) inizio-->
+                    <h1 class="display-5 fw-bold">Virtual Machines</h1>
+                    <!--Titolo Fine-->
+
+                    <!--Sottotitolo inizio-->
+                    <h2 class="display-6">Storia</h2>
+                    <!--Sottotitolo fine-->
+
+                    <!--Testo (paragrafo) inizio-->
+                    <p class="fs-4">
+                        La tecnologia di virtualizzazione venne sviluppata inizialmente negli <b>anni ’60</b> per partizionare l’hardware dei mainframe di grandi dimensioni e 
+                        ottimizzarne l’utilizzo. Gli attuali computer basati sull’architettura x86 ripropongono gli stessi problemi di rigidità e sottoutilizzo che caratterizzavano
+                        i mainframe negli anni ’60. Per risolvere le innumerevoli problematiche associate alla piattaforma x86, tra cui il sottoutilizzo, negli anni ’90 VMware ha 
+                        inventato la virtualizzazione, consentendo il superamento di numerosi ostacoli.
+                    </p>
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/foto1.png" alt="macchina virtuale 1">
+                    <p class="fs-4">
+                        I primi passi: <u>la virtualizzazione dei mainframe </u><br>
+                        La virtualizzazione venne implementata per la prima volta da IBM oltre 30 anni fa come metodo per partizionare in maniera logica i computer mainframe 
+                        in macchine virtuali separate. È grazie a queste partizioni che oggi i mainframe sono in grado di eseguire operazioni in <b>multitasking</b>, ossia eseguire 
+                        più applicazioni e processi simultaneamente. Poiché i mainframe all’epoca erano risorse costose, il loro partizionamento rappresentava un modo per 
+                        valorizzare appieno l’investimento.
+                    </p>
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/foto2.jpg" alt="macchina virtuale 2">
+                    <br></br>
+                    <p class="fs-4">
+                        L’esigenza di virtualizzare i sistemi x86
+                        La virtualizzazione venne di fatto accantonata negli anni ’80 e ’90 quando le applicazioni client-server e gli economici server e desktop x86 hanno dato vita all’elaborazione distribuita. L’ampia diffusione di Windows e la nascita di Linux come sistemi operativi server fecero sì che negli anni ’90 i sistemi x86 si imponessero come standard di settore. L’adozione sempre più vasta e articolata di server e desktop x86 ha comportato nuove sfide operative e infrastrutturali per i reparti IT, tra cui:
+                        <br></br>
+                        <b>Bassi livelli di utilizzo dell’infrastruttura.</b> Secondo quanto riportato dalla società di indagini di mercato IDC (International Data Corporation ) i server x86 sono utilizzati in media <u>soltanto al 10-15% della loro capacità complessiva.</u> Per evitare che eventuali problemi di sicurezza di un’applicazione influiscano sulla disponibilità di un’altra nello stesso server, le aziende di norma eseguono una sola applicazione per server.
+                        <br></br>
+                        <b>Aumento dei costi dell’infrastruttura fisica.</b> I costi operativi per il supporto di un’infrastruttura fisica in continua crescita sono notevolmente aumentati. La maggioranza delle infrastrutture di elaborazione deve rimanere sempre operativa, pertanto i costi di alimentazione, di raffreddamento e di impianto non variano in rapporto ai livelli di utilizzo.
+                        <br></br>
+                        <b>Aumento dei costi di gestione IT.</b> Il grado di formazione ed esperienza specialistica del personale incaricato della gestione infrastrutturale e i costi ad esso associati sono aumentati progressivamente con l’incremento della complessità degli ambienti informatici. Le organizzazioni impiegano una quantità sproporzionata di risorse e tempo per attività manuali correlate alla manutenzione dei server e pertanto necessitano di più personale per il completamento di queste attività.
+                        <br></br>
+                        <b>Failover e disaster recovery insufficienti.</b> Le organizzazioni sono sempre più penalizzate dai tempi di inattività delle applicazioni server mission-critical e dall’inaccessibilità dei desktop importanti. La minaccia di attacchi alla sicurezza, disastri naturali, pandemie e terrorismo ha accresciuto l’importanza di una corretta pianificazione della business continuity, sia per i server che per i desktop aziendali.
+                        <br></br>
+                        <b>Manutenzione impegnativa dei desktop degli utenti finali.</b> La gestione e la protezione dei desktop aziendali presenta non pochi problemi. Il controllo di un ambiente desktop distribuito e l’applicazione di criteri di gestione, accesso e sicurezza che non compromettano l’efficienza operativa degli utenti sono attività complesse e costose. Per eliminare i rischi per la sicurezza, è necessario installare costantemente patch e upgrade negli ambienti desktop.
+                        <br></br>
+                    </p>
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/foto3.jpg" alt="macchina virtuale 3">
+                    
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-primary btn-lg" href="javascript:history.back()"> Precedente </a> <a class="btn btn-primary btn-lg" href="#!"> Successivo </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Footer-->
+    <footer class="py-5 mt-auto bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Made with ❤️ by 5BInfelice</p></div>
+    </footer>
+</body>
+</html>

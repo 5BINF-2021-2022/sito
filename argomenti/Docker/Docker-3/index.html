@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://gitcdn.link/repo/5BINF-2021-2022/sito/main/css/styles.css" rel="stylesheet" />
+
+    <!--Modifica del titolo in base all'argomento inizio-->
+    <title>Come funziona Docker?</title>
+    <!--Modifica del titolo in base all'argomento fine-->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="../index.html">Architetture di Sistemi Distribuiti</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="./fonti.html">Fonti</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="https://github.com/5BINF-2021-2022/sito" target="_blank">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.avoltapg.edu.it/" target="_blank">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-left">
+                <div class="m-4 m-lg-5" id="inizio">
+
+                    <h1 class="display-5 fw-bold">Come funziona Docker?</h1>
+                    <p class="fs-4">
+                        <i>"Docker risolve un problema fondamentale ovvero la necessità di avere degli ambienti di sviluppo identici per ogni singolo componente applicativo"</i>
+                    </p>
+                    <h2 class="display-6">Da cosa è composto?</h2>
+                    <p class="fs-4">Docker per funzionare ha bisogno di due strumenti:
+                        <ul class="fs-4">
+                            <li>il docker Engine</li>
+                            <li> dei container</li>
+                        </ul>
+                    </p>
+                    <br />
+                    <h2 class="display-6">Il Docker Engine</h2>
+                    <p class="fs-4">
+                        Se nelle Macchine Virtuali abbiamo bisogno di un hypervisor per eseguire le nostre macchine, in Docker abbiamo bisogno del Docker Engine che ci permette di eseguire i <b>CONTAINER</b>. <br/>
+                        Quando parliamo di docker in realtà ci riferiamo al Docker Engine, un motore di containerizzazione <a href="https://github.com/moby/moby"><b>open source</b></a> , usato per creare e conteinerizzare le proprie applicazioni. <br/>
+                        Il Docker Engine può essere scaricato dal <a href="https://docs.docker.com/engine/install/"><b>sito ufficiale</b></a> inizialmente creata per linux ora disponibile anche per windows e mac.<br/>
+                        Questa tecnologia agisce come un'applicazione client/server infatti possiede:
+                        <ul class="fs-4">
+                            <li>Un server con un processo demone di lunga durata chiamato <a href="https://docs.docker.com/engine/reference/commandline/cli/"><b>dockerd</b></a></li>
+                            <li>Delle <a href="https://docs.docker.com/engine/api/"><b>API</b></a> che specificano le interfacce che i programmi possono utilizzare per comunicare e istruire il demone</li>
+                            <li>Un interfaccia comandi (CLI) utilizzabile mediante il comando <a href="https://docs.docker.com/engine/reference/commandline/cli/"><b>docker</b></a></li>
+                        </ul>
+                    </p>
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/Docker_engine.png" alt="Docker Engine">
+                    <br />
+                    <h2 class="display-6">I Container </h2>
+                    <p class="fs-4">
+                        <b>Un conteiner</b> è un'unità standard di software <b>che impacchetta il codice e tutte le sue dipendenze</b> in modo che l'applicazione venga <b>eseguita in modo rapido e affidabile da un ambiente di elaborazione all'altro</b>. <br/>
+                        Un'immagine di un conteiner è un pacchetto software <b>leggero, autonomo ed eseguibile che include</b> tutto il necessario per eseguire un'applicazione:
+                        <ul class="fs-4">
+                            <li><b>codice,</b></li>
+                            <li><b>runtime,</b></li>
+                            <li><b>strumenti di sistema,</b></li>
+                            <li><b>librerie di sistema,</b></li>
+                            <li><b>impostazioni,</b></li>
+                        </ul>
+                    </p>
+                    <p class="fs-4">
+                        Le immagini diventano conteiner in fase di esecuzione sul Docker Engine.
+                        Il software containerizzato funzionerà sempre allo stesso modo, indipendentemente dall'infrastruttura, I container isolano il software dal suo ambiente e assicurano che funzioni in modo uniforme nonostante le differenze, ad esempio, tra <b>sviluppo e <a href="https://en.wikipedia.org/wiki/Deployment_environment#Staging">staging</a></b>.
+                    </p>
+                    <br />
+                    <h2 class="display-6">Docker vs Virtual Macchine</h2>
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/docker_vs_VM.png" alt="Docker VS Virtual Macchine">
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-primary btn-lg" href="javascript:history.back()"> Precedente </a> <a class="btn btn-primary btn-lg" href="#!"> Successivo </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Footer-->
+    <footer class="py-5 mt-auto bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Made with ❤️ by 5BInfelice</p></div>
+    </footer>
+</body>
+</html>

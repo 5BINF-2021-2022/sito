@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://gitcdn.link/repo/5BINF-2021-2022/sito/main/css/styles.css" rel="stylesheet" />
+
+    <!--Modifica del titolo in base all'argomento inizio-->
+    <title>Virtual Machines</title>
+    <!--Modifica del titolo in base all'argomento fine-->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="../index.html">Architetture di Sistemi Distribuiti</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="./fonti.html">Fonti</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="https://github.com/5BINF-2021-2022/sito" target="_blank">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.avoltapg.edu.it/" target="_blank">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-left">
+                <div class="m-4 m-lg-5" id="inizio">
+                    <!--DA QUI INIZIA LA MODIFICA-->
+
+                    <!--INSERIRE LE MODIFICHE ESCLUSIVAMENTE ALL'INTERNO DI QUESTO DIV SENZA MODIFICARNE GLI ATTRIBUTI E I TAG-->
+                    <!--Utilizzare esclusivamente i template forniti, non usare tag creati da zero. Moficare solamente quelli già esistenti o copiarli
+                    se si vuole aggiungere altro-->
+                    <!--Per ulteriori informazioni consultare il sito: https://www.w3schools.com/html/default.asp -->
+
+                    <!--Titolo (modificare anche titolo della pagina a riga 9) inizio-->
+                    <h1 class="display-5 fw-bold">I Cgroups</h1>
+                    <!--Titolo Fine-->
+
+                    <!--Sottotitolo inizio-->
+                    <h2 class="display-6">Cosa sono e a cosa servono?</h2>
+                    <!--Sottotitolo fine-->
+                    
+                    <!--Modifiche al testo inizio-->
+                  
+                    <!--Modifiche al testo fine-->
+
+                    <!--Testo (paragrafo) inizio-->
+                    <p class="fs-4">
+                        <b> Cosa sono </b> - I Control Groups sono una <i>feature del kernel</i> la cui creazione è iniziata nel 2006 ad opera di 
+                        ingegneri Google (principalmente Paul Menage e Rohit Seth). Vennero successivamente adottati da <u>RedHat Enterprise Linux (RHEL)</u>. 
+                        Il nome iniziale era “process containers”, successivamente rinomitato nel 2007 in Control Groups per evitare confusione con in Linux Containers.
+                    </p>
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/cgroups1.jpg" alt="esempio di immagne">
+                    <!--Testo (paragrafo) fine-->
+                    <!--Inserimento di un immagine inizio (ci sono 2 tag per le immagini, se ne volete una copiate solo uno dei tag)-->
+                        <!--NB: Le immagini vanno inserite nella cartella photos, devono essere jpg - jpeg - png, 
+                            dovrete modificare il percorso con il nome dell'immagine inserita-->
+                        <!--NBB: Il tag alt="esempio di immagine" serve a ripiazzare l'immagine nel caso non venisse caricata, 
+                            modificatelo con una scritta esplicativa dell'immagine-->
+                            <br>
+                            <p class="fs-4">
+                        <b> A cosa servono </b> - I cgroup consentono di allocare le <u> risorse </u> (come CPU, memoria, network I/O, disk I/O, ecc), tra gruppi di attività (processi) definiti dall'utente in esecuzione su un sistema. 
+                        <u>Puoi monitorare</u> i cgroup che configuri,<u>negare</u> ai cgroup l'accesso a determinate risorse e persino <u>riconfigurare </u>
+                        i tuoi cgroup dinamicamente su un sistema in esecuzione. <br> <i>Ad esempio se ho due macchine virtuali installate nel mio PC e una delle due è più importante dell'altra posso decidere di limitare la VM che mi serve di meno e quindi mettere in risalto l'altra.</i>
+                        </p>        
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/cgroups2.jpg" alt="esempio di immagne">
+                    <!--Inserimento di un immagine fine-->
+                    <br>
+                    <p class="fs-4">
+                        <b> Struttura </b> - I cgroups sono simili ai processi in quanto:<br> <br>
+                        - sono strutturati gerarchicamente <br>
+                        1. <b style="color: red;"> Service Units </b>: sono le unit che più comunemente vediamo <u>associate ai demoni</u>. Possono consistere in un singolo processo o in un gruppo di più processi (vedasi httpd, ad esempio). <br>
+                        2. <b style="color: red;">Scope Units</b>: sono gruppi di processi creati esternamente. Ad esempio le <b>macchine virtuali </b> e i container creati, così come le sessioni utente, vengono registrati da systemd come scope units. <br>
+                        3. <b style="color: red;">Slice Units</b>: sono gruppi di unit <u> organizzate in modo gerarchico</u>. Conterranno solo service o scope units i quali, a loro volta, faranno riferimento ai processi veri e propri. <br> <br>
+                        - i cgroups figli <b>ereditano</b> dal cgroup padre <br><br>
+                    </p>
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/cgroups3.jpg" alt="esempio di immagne"> <br> <br>
+                    <p class="fs-4">
+                        <b> Sottosistemi</b> - La differenza fondamentale è che molte gerarchie diverse di cgroup possono esistere contemporaneamente su un sistema. Se il modello di processo Linux è un singolo albero di processi, allora il modello cgroup è uno o più alberi di task separati e non connessi (cioè processi). <br> <br> <br>
+                        Sono necessarie più gerarchie separate di cgroup perché ogni gerarchia è collegata a uno o più sottosistemi . 
+                        Un <b> sottosistema </b>rappresenta una singola risorsa, come il tempo o la memoria della CPU. Red Hat Enterprise Linux 6 fornisce dieci sottosistemi cgroup, elencati di seguito per nome e funzione: <br> <br>
+                       <i> blkio</i> — imposta i limiti sull'accesso in ingresso/uscita a e da dispositivi a blocchi come unità fisiche (disco, stato solido o USB). <br>
+                        <i> cpu</i> — questo sottosistema utilizza lo scheduler per fornire ai task cgroup l'accesso alla CPU. <br>
+                        <i>cpuacct</i> — genera report automatici sulle risorse della CPU utilizzate dai task in un cgroup. <br>
+                        <i> cpuset</i> — assegna CPU individuali (su un sistema multicore) e nodi di memoria ai task in un cgroup. <br>
+                        <i> devices</i> — consente o nega l'accesso ai dispositivi da parte delle attività in un cgroup. <br>
+                        <i> freezer </i> — sospende o riprende le attività in un cgroup. <br>
+                        <i> memory</i> — imposta i limiti sull'utilizzo della memoria da parte dei task in un cgroup e genera report automatici sulle risorse di memoria utilizzate da tali task. <br>
+                        <i> net_cls</i> — contrassegna i pacchetti di rete con un identificatore di classe (classid) che consente al controller del traffico di Linux (tc) di identificare i pacchetti originati da un particolare task cgroup. <br>
+                        <i> net_prio</i> — fornisce un modo per impostare dinamicamente la priorità del traffico di rete per interfaccia di rete. <br>
+                        <i> ns</i> — il sottosistema dello spazio dei nomi . <br>
+                        <i> perf_event</i> — identifica l'appartenenza al cgroup delle attività e può essere utilizzato per l'analisi delle prestazioni. <br>
+                        </p>  
+                      
+                    <!-- Per inserire la sitografia andare a modificare il file fonti.html-->
+                    <!--QUI FINISCE LA MODIFICA-->
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-primary btn-lg" href="javascript:history.back()"> Precedente </a> <a class="btn btn-primary btn-lg" href="#!"> Successivo </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Footer-->
+    <footer class="py-5 mt-auto bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Made with ❤️ by 5BInfelice</p></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://gitcdn.link/repo/5BINF-2021-2022/sito/main/css/styles.css" rel="stylesheet" />
+
+    <!--Modifica del titolo in base all'argomento inizio-->
+    <title>WebServices</title>
+    <!--Modifica del titolo in base all'argomento fine-->
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../../../icone/webservices.png"/>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="../../../index.html">Architetture di Sistemi Distribuiti</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="../../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="./fonti.html">Fonti</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="https://github.com/5BINF-2021-2022/sito" target="_blank">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.avoltapg.edu.it/" target="_blank">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-left">
+                <div class="m-4 m-lg-5" id="inizio">
+                    <h1 class="display-5 fw-bold">Dal Client/Server ai web services - Descrizione</h1>
+                    <br>
+
+                    <h2 class="display-6">Definizioni</h2>
+                    <p class="fs-4">
+                        <b>Client:</b> è un classico computer, ad esempio, un desktop, un notebook, un netbook, uno smartphone o un tablet, in generale qualsiasi dispositivo (device) capace di connettersi a Internet. <br>
+                        <b>Server:</b> sono sistemi (o sottosistemi) di elaborazione che forniscono differenti tipi di servizi ad altri sistemi (Client) che ne fanno richiesta in una rete di calcolatori (locale o geografica). <br>
+                        <b>Web Service:</b> un servizio disponibile in rete ad uso di altri programmi, che può essere pubblicato, localizzato e invocato attraverso il Web. <br>
+                    </p>
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/modelloWeb.jpg" alt="modello web service">
+                    <hr>
+
+                    <h2 class="display-6">Tre componenti dei Web Service</h2>
+                    <p class="fs-4">
+                        L’architettura che sta alla base dei Web services è sempre la stessa, indipendentemente dai Web services specifici dei vari fornitori utilizzati. <br>
+                        L’architettura descrive le interazioni tra tre componenti principali: <br>
+                        <ul class="fs-4">
+                            <li><b>Web Service Provider:</b> Il Web Service Provider sviluppa e definisce i Web Services e li pubblica poi all’interno dei Web Service Registries, oppure li rende direttamente disponibili ai Web Service Requester. </li>
+                            <br>
+                            <li><b>Web Service Requester:</b> Il Web Service Requester effettua un’operazione di ricerca per localizzare i servizi desiderati resi disponibili dai Web Service Provider e poi richiedono questi stessi servizi ai Web Service Registries oppure direttamente al luogo della loro pubblicazione.</li>
+                            <br>
+                            <li><b>Web Service Registries:</b> I Web Service Registries si comportano come directory centralizzate, e sono depositari dei Web Services definiti e pubblicati dai Web Service Provider. </li>
+                        </ul>
+                        <img id="test" class="img-fluid mt-2 mb-2" src="./photos/3webservice.jpg" alt="immagine 3 tipologie web service">
+                        <hr>
+                    </p>
+                    
+                    <h2 class="display-6">Vantaggi</h2>
+                    <p class="fs-4">
+                        <ul class="fs-4">
+                            <li><b>Interoperabilità</b></li> - Tutti i Web Services possono interagire tra loro.
+                            <li><b>Accessibilità</b></li> - Tutti i dispositivi, che supportano fondamentalmente le tecnologie HTTP e XML, possono accedere ai Web Services e consumarli.
+                            <li><b>Riuso di componenti</b></li> - gli sviluppatori potranno usare un ampio numero di Web Services, forniti da terzi parti, da integrare nelle proprie applicazioni.
+                            <li><b>Nuovi canali di comunicazione</b></li> - si può far leva sugli investimenti fatti nell’infrastruttura Internet per realizzare nuovi canali di comunicazione per raggiungere i propri clienti.
+                        </ul>
+                        <h3> Ulteriori punti a favore sono:</h3>
+                        <ul class="fs-4">
+                            <li>
+                                Non è necessario installare software sui client quindi è possibile cambiare PC senza spostare dati.
+                            </li>
+                            <li>
+                                I dati sono al sicuro sui server (con aggiornamento, antivirus...)
+                            </li>
+                            <li>
+                                Anche se i dati sono su in un unico database gli utenti possono avere diversi livelli di accesso in base ai loro privilegi.
+                            </li>
+                        </ul>
+                        <h3> Vincoli:</h3>
+                        <ul class="fs-4">
+                            <li>
+                                Per l’utilizzo è sempre necessaria una connessione ad internet
+                            </li>
+                            <li>
+                                È sempre previsto un piccolo canone annuale per l’utilizzo del server gestito da terzi.
+                            </li>
+                            <li>
+                                Possono esistere delle limitazioni tecnologiche dovute alla tipologia di implementazione del server.
+                            </li>
+                        </ul>
+                    </p>
+                    
+                    <div class="text-center">
+                        <a class="btn btn-primary btn-lg" href="javascript:history.back()"> Precedente </a> <a class="btn btn-primary btn-lg" href="../WebServices-3/index.html"> Successivo </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Footer-->
+    <footer class="py-5 mt-auto bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Made with ❤️ by 5BInfelice</p></div>
+    </footer>
+</body>
+</html>

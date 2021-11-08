@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://gitcdn.link/repo/5BINF-2021-2022/sito/main/css/styles.css" rel="stylesheet" />
+
+    <!--Modifica del titolo in base all'argomento inizio-->
+    <title>Client/Server</title>
+    <!--Modifica del titolo in base all'argomento fine-->
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../../../icone/mainframes.png"/>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="../../../index.html">Architetture di Sistemi Distribuiti</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="../../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="./fonti.html">Fonti</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="https://github.com/5BINF-2021-2022/sito" target="_blank">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.avoltapg.edu.it/" target="_blank">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-left">
+                <div class="m-4 m-lg-5" id="inizio">
+                    <!--DA QUI INIZIA LA MODIFICA-->
+
+                    <!--INSERIRE LE MODIFICHE ESCLUSIVAMENTE ALL'INTERNO DI QUESTO DIV SENZA MODIFICARNE GLI ATTRIBUTI E I TAG-->
+                    <!--Utilizzare esclusivamente i template forniti, non usare tag creati da zero. Moficare solamente quelli già esistenti o copiarli
+                    se si vuole aggiungere altro-->
+                    <!--Per ulteriori informazioni consultare il sito: https://www.w3schools.com/html/default.asp -->
+
+                    <!--Titolo (modificare anche titolo della pagina a riga 9) inizio-->
+                    <h1 class="display-5 fw-bold">STRUTTURA DEL MODELLO ISO OSI </h1>
+                    <!--Titolo Fine-->
+
+                    <!--Testo (paragrafo) inizio-->
+                    <p class="fs-4">
+						Il modello ISO/OSI – conosciuto anche come pila ISO/OSI – è organizzato in 7 livelli gerarchici, che comunicano tra loro tramite un’interfaccia.
+Ogni livello fornisce servizi al livello superiore e si dividono in livelli di trasporto (media layers) e livelli di applicazione (host layers).
+Prima di approfondire la questione dei livelli, è bene ricordare che:
+
+						
+					   <br>
+					</li> La rete può essere paragonata all’insieme “strade” che consentono il trasporto di informazioni da un punto ad un altro della rete (per dirla meglio, tra una sorgente e un destinatario)<br>
+				</li> Assembly 7%<br>
+			</li> Le informazioni scambiate in rete – sia voce che dati – sono contenute in pacchetti di dati, che per essere spediti devono essere “impacchettati” correttamente e poi “spacchettati” dal destinatario per essere letti. A questo proposito, è importante che i pacchetti siano disposti secondo un certo ordine, per consentire a chi li riceve di leggere correttamente il messaggio.<br>
+						<br>
+						 <H2><i>LIVELLO 1</i></H2>
+						 <br>
+						 <p>Il livello fisico è il livello 1 del modello ISO/OSI.
+							Questo livello riceve dal livello di collegamento i frame da trasmettere, li converte in una sequenza di bit e li trasmette.
+							Il livello 1 si preoccupa della gestione del mezzo trasmissivo (ad esempio, cavo coassiale o fibre ottiche) su cui avviene lo scambio di informazioni, occupandosi della trasmissione di singoli bit su un mezzo trasmissivo. Esso definisce per questo le modalità di connessione tra il cavo e la scheda di rete e di conseguenza le caratteristiche cui i mezzi di collegamento fisico devono sottostare, quali:
+							</p><br>
+						<li>caratteristiche fisiche, come forma, dimensioni, numero di piedini di un connettore, specifiche meccaniche.
+					<li>caratteristiche funzionali, come il significato dei pin di un componente.</li>
+				<li>caratteristiche elettriche, come i valori di tensione per i livelli logici, e di conseguenza la codifica, la sincronizzazione e la durata di ogni bit.</li>
+			<li>codifica del segnale digitale su un mezzo trasmissivo che è inerentemente analogico (modulazione).</li>
+							<br>
+							<p>Esistono diversi standard relativi alla gestione del mezzo trasmissivo, sia esso analogico o digitale come il repeater o l’HUB.
+							</p><br>
+							<H2><i>LIVELLO 2</i></H2><br>
+							<p>Il livello di collegamento dati (o data link layer) è il secondo livello dell'architettura di rete basata sul modello ISO/OSI per l'interconnessione di sistemi aperti. Questo livello in trasmissione riceve pacchetti dati dal livello di rete e forma i frame che vengono passati al sottostante livello fisico con l'obiettivo di permettere il trasferimento affidabile dei dati attraverso il sottostante canale.
+							</p><br>
+							<p>Funzionalità</p><BR></BR>
+							<P>Il livello data link deve quindi svolgere più funzioni specifiche:
+							</P><br>
+						<li>Nella fase di trasmissione raggruppa i bit provenienti dallo strato superiore e destinati al livello fisico in pacchetti chiamati frame (framing).</li>      
+							<li>Nella fase di ricezione controlla e gestisce gli errori di trasmissione (controllo di errore).</li>
+						<li>Regola il flusso della trasmissione fra sorgente e destinatario (controllo di flusso).</li>
+					<li>Nella fase di trasmissione opera una qualche forma di accesso multiplo/multiplazione per l'accesso condiviso tra più utenti al canale fisico che eviti collisioni tra pacchetti e interferenze in ricezione o sul canale.</li>
+
+				
+							<br>
+							<h2><i>LIVELLO 3</i></h2>
+							<br>
+							<p>livello di rete (Network Layer): con il livello 3 la trasmissione dati raggiunge la rete Internet e qui avviene l’indirizzamento logico dei dispositivi, a cui viene assegnato un indirizzo IP univoco. Ritornando al nostro esempio, ai dati delle e-mail viene aggiunto un network header, che comprende le informazioni sul routing e il controllo del flusso di dati. Anche in questo caso i sistemi ricorrono a standard Internet come IP, ICMP, X.25, RIP o OSPF. Solitamente nello scambio e-mail si utilizza il protocollo TCP over IP.
+							</p>
+							<br>
+							<h2><i>LIVELLO 4</i></h2>
+							 <p>livello di trasporto (Transport Layer): il livello di trasporto serve come elemento di unione tra i livelli orientati all’applicazione e quelli orientati al trasporto. Qui si realizza la connessione logica end-to-end del canale di trasferimento tra i sistemi comunicanti. Anche in questo caso bisogna aggiungere delle informazioni precise ai dati delle e-mail. Al pacchetto che è stato già ampliato con l’header dei livelli orientati all’applicazione, viene aggiunto qui un transport header. Si utilizzano in questo caso i protocolli di rete standard come TCP o UDP. Inoltre qui vengono definite le porte dalle quali entrano le applicazioni sul sistema target. Sul livello 4 avviene anche l’assegnazione di un pacchetto ad una precisa applicazione.</p>
+							<br>
+							<h2><i>LIVELLO 5</i></h2>
+							<br>
+							<p>In telecomunicazioni il livello di sessione è il quinto livello della scala gerarchica del modello ISO/OSI per reti di calcolatori. Offre i servizi che consentono ad utenti operanti su macchine differenti di colloquiare tra loro attraverso la rete di comunicazione. In particolare, in questo livello vengono definite le regole per aprire e chiudere una connessione logica (Protocolli di connessione) e quelle indispensabili al trasferimento dei dati (Protocolli di comunicazione).
+								Il compito principale è quindi di coordinare il dialogo tra utenti basandosi sul servizio offerto dal livello di trasporto, offrendo i medesimi servizi offerti dal livello di trasporto (apertura-chiusura collegamento, connessione e trasferimento dati).
+								In pratica, quando lo strato superiore richiede l'apertura di un collegamento con un destinatario remoto, lo strato di sessione aprirà una connessione logica tra il nodo e la rete, utilizzando il corrispondente protocollo per definire la tipologia del collegamento (half o full-duplex).
+								In seguito, durante la fase di colloquio, sarà ancora lo strato di sessione che, in base al protocollo di comunicazione, gestirà il controllo del dialogo in modo che la trasmissione sia cadenzata da punti di sincronizzazione intermedi, da ciascun dei quali sia possibile far nuovamente partire la fase di trasferimento dei dati, in caso di errore.
+								</p>
+							
+							<br>
+							<h2><i>LIVELLO 6</i></h2>
+							<br>
+							<p>livello di presentazione (Presentation Layer): nella comunicazione di rete è importante garantire che i dati siano trasmessi nei formati standard, quindi in questo livello le rappresentazioni locali vengono trasferite nel formato standard. Nel caso della trasmissione delle e-mail viene definito come il messaggio dovrebbe apparire e per questo viene aggiunto al pacchetto un presentation header, che contiene informazioni su come l’e-mail deve essere codificata (in genere in Italia si usa la codifica ISO 8859-1 (Latin1) o ISO 8859-15), in quale formato sono eventuali allegati (ad esempio JPEG o MPEG4) e come i dati sono compressi o crittografati (ad esempio con i protocolli SSL/TLS). Così si garantisce che il formato delle e-mail viene compreso anche dal sistema target e il messaggio verrà consegnato correttamente.
+							</p>
+							
+							<br>
+							<h2><i>LIVELLO 7</i></h2>
+							<br>
+							<p>livello di applicazione (Application Layer): questo livello del modello ISO/OSI è quello a diretto contatto con le applicazioni, come programmi di posta elettronica o browser. Qui avviene l’input e l’output dei dati e viene stabilita la connessione con i livelli inferiori del modello ISO/OSI, oltre che essere messe a disposizione le funzionalità per le applicazioni. Prendendo in considerazione la trasmissione delle e-mail, il processo si può chiarire così: un utente scrive un messaggio nel programma di posta elettronica presente sul suo dispositivo, che viene preso in carico sotto forma di pacchetto nel livello di applicazione, dove vengono aggiunte informazioni aggiuntive ai dati delle e-mail sotto forma di un application header (si parla anche di “incapsulamento”). Nell’header è contenuta anche l’informazione che i dati elaborati provengono da un programma di posta elettronica.  Inoltre viene definito il protocollo da utilizzare per la trasmissione delle e-mail sul livello di applicazione (nel caso di un’e-mail si tratta generalmente di quello SMTP).</p>
+							
+                    </p>
+                    <!--Testo (paragrafo) fine-->
+
+                    <!--Inserimento di un immagine inizio (ci sono 2 tag per le immagini, se ne volete una copiate solo uno dei tag)-->
+                        <!--NB: Le immagini vanno inserite nella cartella photos, devono essere jpg - jpeg - png, 
+                            dovrete modificare il percorso con il nome dell'immagine inserita-->
+                        <!--NBB: Il tag alt="esempio di immagine" serve a ripiazzare l'immagine nel caso non venisse caricata, 
+                            modificatelo con una scritta esplicativa dell'immagine-->
+			                <div class="text-center">
+                                <a class="btn btn-primary btn-lg" href="javascript:history.back()"> Precedente </a> <a class="btn btn-primary btn-lg" href="../../../index.html"> Home </a>
+                            </div>
+    </header>
+    <!-- Footer-->
+    <footer class="py-5 mt-auto bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Made with ❤️ by 5BInfelice</p></div>
+    </footer>
+</body>
+</html>

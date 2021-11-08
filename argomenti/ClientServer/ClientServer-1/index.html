@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://gitcdn.link/repo/5BINF-2021-2022/sito/main/css/styles.css" rel="stylesheet" />
+
+    <!--Modifica del titolo in base all'argomento inizio-->
+    <title>Modello Client/Server</title>
+    <!--Modifica del titolo in base all'argomento fine-->
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../../../icone/mainframes.png"/>    
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="../../../index.html">Architetture di Sistemi Distribuiti</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="../../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="./fonti.html">Fonti</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="https://github.com/5BINF-2021-2022/sito" target="_blank">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.avoltapg.edu.it/" target="_blank">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-left">
+                <div class="m-4 m-lg-5" id="inizio">
+                    <!--DA QUI INIZIA LA MODIFICA-->
+
+                    <!--INSERIRE LE MODIFICHE ESCLUSIVAMENTE ALL'INTERNO DI QUESTO DIV SENZA MODIFICARNE GLI ATTRIBUTI E I TAG-->
+                    <!--Utilizzare esclusivamente i template forniti, non usare tag creati da zero. Moficare solamente quelli già esistenti o copiarli
+                    se si vuole aggiungere altro-->
+                    <!--Per ulteriori informazioni consultare il sito: https://www.w3schools.com/html/default.asp -->
+
+                    <!--Titolo (modificare anche titolo della pagina a riga 9) inizio-->
+                    <h1 class="display-5 fw-bold">Dai Mainframe al Client/Server</h1>
+                    <!--Titolo Fine-->
+
+                    <!--Sottotitolo inizio-->
+                    <h2 class="display-6">Quando, Descrizione</h2>
+                    <!--Sottotitolo fine-->
+                    
+                    <!--Modifiche al testo inizio-->
+                    <!--Modifiche al testo fine-->
+
+                    <!--Testo (paragrafo) inizio-->
+                    <p class="fs-4">
+                        <b>Mainframe</b>
+                        I mainframe sono <b>potenti calcolatori</b> centralizzati che dagli anni ’60 in poi venivano usati in grandi aziende per risolvere diverse operazioni di calcolo. Occupavano intere stanze ed erano assemblati sotto forma di armadi metallici <b>(“frame” = “armatura”)</b>.
+                        Fino all’arrivo dei PC negli anni ’80-’90 i mainframe sono stati il simbolo dell’elaborazione di fascia alta.<br>
+                        L’utilizzo storico dei mainframe è la gestione dei carichi transazionali, ma di recente capacità di gestire grandi quantità di operazioni di input/output ha portato i mainframe anche nelle applicazioni de gestione di Big Data.<br>
+                        Composti da <b>numerosi processori</b> (oltre un centinaio di CPU), <b>numerosi banchi di memorie RAM</b> (centinaia di gigabyte).<br>
+                        Molti mainframe contenevano dei processori che non erano accessibili all’utente, ma che si attivavano solo nel caso in cui delle CPU si bloccassero.
+                        <img id="test" class="img-fluid mt-2 mb-2" src="./photos/3.png" alt="mfrs">
+                        <b>Client/Server (C/S)</b>
+                        Il modello C/S  è costituito da un <b>insieme di processi in esecuzione su diversi host</b>:<br>
+                        Server: processi che gestiscono una o più risorse (host).<br>
+                        Client: processi che richiedono l’accesso ad alcune risorse. <br>
+                        Un processo server può diventare a sua volta diventare client ed essere contemporaneamente sia client che server.
+                        Differenza server e servizio:<br>
+                        <i>-Servizio:</i>entità astratta da uno o più server;<br>
+                        <i>-Server:</i> insieme di macchine, eterogenee, che ospitano dei servizi;<br>
+                        Esempi di servizi tipici delle architetture client/server:<br>
+                        - <u>HTTP</u> (Porta 80) e <u>HTTPS</u> (porta 443): utilizzati per la trasmissione d’informazioni sul web.<br>
+                        - <u>FTP</u> (Porte 21/20): utilizzati per il trasferimento di dati tra diversi host.<br>
+                        - <u>Telnet</u> (Porta 23): utilizzato per il controllo di un computer da remoto.<br>
+                        <img id="test" class="img-fluid mt-2 mb-2" src="./photos/1.jpg" alt="cs" width="350px"><br>
+                        Schema funzionamento del modello Client/Server:<br>
+                        1. Il Client <b>invia</b> una <b>richiesta al Server</b>  (richiesta di servizio).<br>
+                        2. Il server (in stato di <b>listening</b>) riceve la richiesta.<br>
+                        3. Server <b>esegue</b> il servizio richiesto (mediante un thread concorrente).<br>
+                        4. Server <b>invia una risposta</b> ed eventuali dati al client (richiedente).<br>
+                        5. Il <b>client riceve</b> la risposta ed eventuali dati.<br>                   
+                    </p>
+                    <!--Testo (paragrafo) fine-->
+
+                    <!--Inserimento di un immagine inizio (ci sono 2 tag per le immagini, se ne volete una copiate solo uno dei tag)-->
+                        <!--NB: Le immagini vanno inserite nella cartella photos, devono essere jpg - jpeg - png, 
+                            dovrete modificare il percorso con il nome dell'immagine inserita-->
+                        <!--NBB: Il tag alt="esempio di immagine" serve a ripiazzare l'immagine nel caso non venisse caricata, 
+                            modificatelo con una scritta esplicativa dell'immagine-->
+                    
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/2.jpg" alt="cs1">
+                    
+                    <!--Inserimento di un immagine fine-->
+
+                    <!-- Per inserire la sitografia andare a modificare il file fonti.html-->
+                    <!--QUI FINISCE LA MODIFICA-->
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-primary btn-lg" href="../ClientServer-2/index.html"> Successivo </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Footer-->
+    <footer class="py-5 mt-auto bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Made with ❤️ by 5BInfelice</p></div>
+    </footer>
+</body>
+</html>

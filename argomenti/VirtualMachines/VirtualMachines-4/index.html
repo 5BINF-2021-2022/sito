@@ -59,7 +59,7 @@
                     <p class="fs-4">
                         <b> Cosa sono </b> - I Control Groups sono una <i>feature del kernel</i> la cui creazione è iniziata nel 2006 ad opera di 
                         ingegneri Google (principalmente Paul Menage e Rohit Seth). Vennero successivamente adottati da <u>RedHat Enterprise Linux (RHEL)</u>. 
-                        Il nome iniziale era “process containers”, successivamente rinomitato nel 2007 in Control Groups per evitare confusione con in Linux Containers.
+                        Il nome iniziale era “process containers”, successivamente rinomitato nel 2007 in Control Groups per evitare confusione con i Linux Containers.
                     </p>
                     <img id="test" class="img-fluid mt-2 mb-2" src="./photos/cgroups1.jpg" alt="esempio di immagne">
                     <!--Testo (paragrafo) fine-->
@@ -68,40 +68,51 @@
                             dovrete modificare il percorso con il nome dell'immagine inserita-->
                         <!--NBB: Il tag alt="esempio di immagine" serve a ripiazzare l'immagine nel caso non venisse caricata, 
                             modificatelo con una scritta esplicativa dell'immagine-->
-                            <br>
+                            <br/>
                             <p class="fs-4">
                         <b> A cosa servono </b> - I cgroup consentono di allocare le <u> risorse </u> (come CPU, memoria, network I/O, disk I/O, ecc), tra gruppi di attività (processi) definiti dall'utente in esecuzione su un sistema. 
                         <u>Puoi monitorare</u> i cgroup che configuri,<u>negare</u> ai cgroup l'accesso a determinate risorse e persino <u>riconfigurare </u>
-                        i tuoi cgroup dinamicamente su un sistema in esecuzione. <br> <i>Ad esempio se ho due macchine virtuali installate nel mio PC e una delle due è più importante dell'altra posso decidere di limitare la VM che mi serve di meno e quindi mettere in risalto l'altra.</i>
+                        i tuoi cgroup dinamicamente su un sistema in esecuzione. <br/> <i>Ad esempio se ho due macchine virtuali installate nel mio PC e una delle due è più importante dell'altra posso decidere di limitare la VM che mi serve di meno e quindi mettere in risalto l'altra.</i>
                         </p>        
                     <img id="test" class="img-fluid mt-2 mb-2" src="./photos/cgroups2.jpg" alt="esempio di immagne">
                     <!--Inserimento di un immagine fine-->
-                    <br>
+                    <br/>
                     <p class="fs-4">
-                        <b> Struttura </b> - I cgroups sono simili ai processi in quanto:<br> <br>
-                        - sono strutturati gerarchicamente <br>
-                        1. <b style="color: red;"> Service Units </b>: sono le unit che più comunemente vediamo <u>associate ai demoni</u>. Possono consistere in un singolo processo o in un gruppo di più processi (vedasi httpd, ad esempio). <br>
-                        2. <b style="color: red;">Scope Units</b>: sono gruppi di processi creati esternamente. Ad esempio le <b>macchine virtuali </b> e i container creati, così come le sessioni utente, vengono registrati da systemd come scope units. <br>
-                        3. <b style="color: red;">Slice Units</b>: sono gruppi di unit <u> organizzate in modo gerarchico</u>. Conterranno solo service o scope units i quali, a loro volta, faranno riferimento ai processi veri e propri. <br> <br>
-                        - i cgroups figli <b>ereditano</b> dal cgroup padre <br><br>
+                        <b> Struttura </b> - I cgroups sono simili ai processi in quanto:<br/> <br/>
+                        - sono strutturati gerarchicamente <br/>
+                        1. <b style="color: red;"> Service Units </b>: sono le unit che più comunemente vediamo <u>associate ai daemon</u>. Possono consistere in un singolo processo o in un gruppo di più processi (come ad esempio httpd, hypertext transfer protocol daemon). <br/>
+                        2. <b style="color: red;">Scope Units</b>: sono gruppi di processi creati esternamente. Ad esempio le <b>macchine virtuali </b> e i container creati, così come le sessioni utente, vengono registrati da systemd come scope units. <br/>
+                        3. <b style="color: red;">Slice Units</b>: sono gruppi di unit <u> organizzate in modo gerarchico</u>. Conterranno solo service o scope units i quali, a loro volta, faranno riferimento ai processi veri e propri. <br/> <br/>
+                        - i cgroups figli <b>ereditano</b> dal cgroup padre <br/><br/>
                     </p>
-                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/cgroups3.JPG" alt="esempio di immagne"> <br> <br>
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/cgroups3.jpg" alt="esempio di immagne"> <br/> <br/>
                     <p class="fs-4">
-                        <b> Sottosistemi</b> - La differenza fondamentale è che molte gerarchie diverse di cgroup possono esistere contemporaneamente su un sistema. Se il modello di processo Linux è un singolo albero di processi, allora il modello cgroup è uno o più alberi di task separati e non connessi (cioè processi). <br> <br> <br>
-                        Sono necessarie più gerarchie separate di cgroup perché ogni gerarchia è collegata a uno o più sottosistemi . 
-                        Un <b> sottosistema </b>rappresenta una singola risorsa, come il tempo o la memoria della CPU. Red Hat Enterprise Linux 6 fornisce dieci sottosistemi cgroup, elencati di seguito per nome e funzione: <br> <br>
-                       <i> blkio</i> — imposta i limiti sull'accesso in ingresso/uscita a e da dispositivi a blocchi come unità fisiche (disco, stato solido o USB). <br>
-                        <i> cpu</i> — questo sottosistema utilizza lo scheduler per fornire ai task cgroup l'accesso alla CPU. <br>
-                        <i>cpuacct</i> — genera report automatici sulle risorse della CPU utilizzate dai task in un cgroup. <br>
-                        <i> cpuset</i> — assegna CPU individuali (su un sistema multicore) e nodi di memoria ai task in un cgroup. <br>
-                        <i> devices</i> — consente o nega l'accesso ai dispositivi da parte delle attività in un cgroup. <br>
-                        <i> freezer </i> — sospende o riprende le attività in un cgroup. <br>
-                        <i> memory</i> — imposta i limiti sull'utilizzo della memoria da parte dei task in un cgroup e genera report automatici sulle risorse di memoria utilizzate da tali task. <br>
-                        <i> net_cls</i> — contrassegna i pacchetti di rete con un identificatore di classe (classid) che consente al controller del traffico di Linux (tc) di identificare i pacchetti originati da un particolare task cgroup. <br>
-                        <i> net_prio</i> — fornisce un modo per impostare dinamicamente la priorità del traffico di rete per interfaccia di rete. <br>
-                        <i> ns</i> — il sottosistema dello spazio dei nomi . <br>
-                        <i> perf_event</i> — identifica l'appartenenza al cgroup delle attività e può essere utilizzato per l'analisi delle prestazioni. <br>
-                        </p>  
+                        <b> Sottosistemi</b> - La differenza fondamentale con i processi è che possono esistere più gerarchie di cgroups in simultanea in un sistema. Se il modello dei processi Linux è un singolo albero di processi allora il modello dei cgroups sono uno o più alberi di processi separati e non connessi tra di loro.<br/><br/>
+
+                        Sono necessarie più gerarchie di cgroups perchè ogni gerarchia è collegata a uno o più sottosistemi. Un <b>sottosistema</b> rappresenta una singola risorsa, come il tempo o la memoria della CPU. Red Hat Enterprise Linux 6 fornisce dieci sottosistemi cgroup, elencati di seguito per nome e funzione:<br/><br/>
+                        
+                        <i>blkio:</i> questo sottosistema imposta i limiti di accesso I/O a, e da, un block device come i dischi o le USB<br/>
+                        
+                        <i>cpu:</i> questo sottosistema utilizza lo scheduler per fornire ai task cgroup l'accesso alla CPU<br/>
+                        
+                        <i>cpuact:</i> genera report automatici sulle risorse della CPU utilizzate dai task in un cgroup<br/>
+                        
+                        <i>cpuset:</i> assegna CPU individuali (su un sistema multicore) e nodi di memoria ai processi in un cgroup.<br/>
+                        
+                        <i>devices:</i> consente o nega l'accesso ai device da parte delle attività in un cgroup<br/>
+                        
+                        <i>freezer:</i> sospende o riprende le attività in un cgroup.<br/>
+                        
+                        <i>memory:</i> imposta i limiti sull'utilizzo della memoria da parte dei task in un cgroup e genera report automatici sulle risorse di memoria utilizzate da tali task.<br/>
+                        
+                        <i>net_cls:</i> contrassegna i pacchetti di rete con un identificatore di classe (classid) che consente al controller del traffico di Linux (tc) di identificare i pacchetti originati da un particolare task cgroup.<br/>
+                        
+                        <i>net_prio:</i> fornisce un modo per impostare dinamicamente la priorità del traffico di rete per interfaccia di rete.<br/>
+                        
+                        <i>ns:</i> il sottosistema dei nomi (namespace subsystem)<br/>
+                        
+                        <i>perf_event:</i> identifica l'appartenenza al cgroup delle attività e può essere utilizzato per l'analisi delle prestazioni.<br/>
+                    </p>  
                       
                     <!-- Per inserire la sitografia andare a modificare il file fonti.html-->
                     <!--QUI FINISCE LA MODIFICA-->

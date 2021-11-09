@@ -40,28 +40,41 @@
                     <h1 class="display-5 fw-bold">Pila protocollare</h1>
                     <img id="test" class="img-fluid mt-2 mb-2" src="./photos/immagine1.jpg" alt="esempio di immagne"></p>
                     <p class="fs-4">
-                        Il fatto che l'industria si sta muovendo verso standard di programmazione (Java) e di scambio dei dati (XML) comuni, ha favorito l'ascesa dei Web Services.<br>
-                        La pila protocollare dei Web service e' l'insieme dei protocolli di rete utilizzati per definire, localizzare, realizzare e far interagire tra di loro i Web service. <br>
+                        Il fatto che l'industria si sta muovendo verso standard di programmazione (Java) e di scambio dei dati (XML) comuni, ha favorito l'ascesa dei <b>Web Services</b>.<br>
+                        La pila protocollare dei Web service e' l'insieme dei protocolli di rete utilizzati per <b>definire, localizzare, realizzare e far interagire</b> tra di loro i Web service. <br/>
+						
 						<b><u>Trasporto del servizio:</u></b><br>
-                        responsabile per il trasporto dei messaggi tra le applicazioni in rete, include il protocollo HTTP.
+                        Responsabile per il trasporto dei messaggi tra le applicazioni in rete, include il <b>protocollo HTTP.</b><br/>
+						
 						<b><u>XML:</u></b><br>
-                        Extensible Markup Language, o XML, fornisce le fondamenta per i Web Servicese e quella tecnologia dei Web services su cui si basano tutte le altre tecnologie.
-						Simile a HTML, XML usa tag di programmazione per definire la proprieta' dei dati sulle pagine Web e altri documenti. <br>
+                        <b>Extensible Markup Language</b>, fornisce le fondamenta per i Web Servicese e quella tecnologia dei Web services su cui si basano tutte le altre tecnologie.
+						XML è un linguaggio di markup simile al linguaggio HTML: si tratta di un insieme di regole per la codifica dei documenti tramite tag, in un formato leggibile sia per gli utenti che per le macchine.<br>
+						La differenza tra XML e HTML è legata <b>ai tag</b>: infatti mentre HTML si basa su numero limitato di tag, XML consente di utilizzare un numero <u>illimitato</u> di tag, definibili secondo le specifiche esigenze del progetto.<br/>
+						
 						<b><u>SOAP (Simple Object Access Protocol):</u></b><br>
-                        e' un protocollo che controlla lo scambio di messaggi tra componenti software.<br> 
-                        Permette la comunicazione tra applicazioni attraverso Internet, indipendentemente dalla piattaforma su cui queste applicazioni girano.<br>
-						I parametri d'ingresso e uscita del metodo del componente remoto sono definiti in un documento XML che viene incapsulato in un messaggio HTTP e inviato al Web Application Server del provider del servizio.<br>
-                        Un dispatch SOAP, decodifica il messaggio XML,  invoca il metodo richiesto e prepara una risposta, codificata in XML, che invia al richiedente. <br>
+                        E' un protocollo che controlla <u>lo scambio di messaggi tra componenti software</u>.<br> 
+                        <b>Permette la comunicazione tra applicazioni</b> attraverso Internet, indipendentemente dalla piattaforma su cui queste applicazioni girano.<br>
+						I parametri d'ingresso e uscita sono definiti in un documento XML che viene incapsulato in un messaggio HTTP e inviato al Web Application Server del provider del servizio.<br>
+                        <u>Un dispatch SOAP</u>, decodifica il messaggio XML,  invoca il metodo richiesto e prepara una risposta che invia al richiedente. <br/>
+						
 						<b><u>Descrizione del servizio (WSDL):</b></u><br>
-                        Per integrare automaticamente un Web Service a livello di programmazione e' necessario un documento che descriva tutti i dettagli tecnici relativi al servizio come ad esempio, l'interfaccia (nomi dei metodi, i tipi degli argomenti e dei valori di ritorno) e l'utilizzo.<br>
-                        Il linguaggio usato per scrivere questo documento e' chiamato WSDL (Web Services Description Language, basato su XML. <br>
+                        <b>Il Web Services Description Language (WSDL)</b> è un linguaggio formale in formato XML utilizzato per la <u>creazione di "documenti"</u> che descrivono i Web service.<br>
+						Mediante WSDL può essere infatti <b>descritta l'interfaccia pubblica di un Web service</b> che indica come interagire con un determinato servizio.<br>
+						Un "documento" WSDL contiene infatti, relativamente al Web service descritto, informazioni su:<br></p>
+						<ul class="fs-4">
+                            <li><b>cosa può essere utilizzato</b> (le "operazioni" messe a disposizione dal servizio);</li>
+                            <li>viene specificato il <u>protocollo di comunicazione da utilizzare per accedere al servizio</u>, </u>il formato dei messaggi</u> accettati in input e restituiti in output dal servizio;</li>
+                            <li><b>dove si trova il servizio nella rete</b>.</li>
+						</ul><br/>
+                        <p class="fs-4">
 						<b><u>Elenco dei servizi (UDDI):</b></u><br> 
-						Universal Discovery, Description and Integration (UDDI), mette a disposizione directory services pubblicamente raggiungibili per Web services basati su XML.<br>
-						Quando richiesto dalle applicazioni, i registri UDDI forniscono informazioni su servizi nuovi, sullo stato di servizi particolari e sulla disponibilita' dei Web service compatibili. <br>
+						<b>Universal Discovery, Description and Integration (UDDI)</b>, mette a disposizione <u>directory services pubblicamente raggiungibili</u> per Web services basati su XML.<br>
+						Quando richiesto dalle applicazioni, i registri UDDI <u>forniscono informazioni</u> su <b>servizi nuovi</b>, <b>sullo stato</b> di servizi particolari e sulla <b>disponibilita'</b> dei Web service compatibili. <br/>
+						
 						<b><u>WS-Security:</b></u><br>
-                        il protocollo standard Web Services Security protocol permette l'autenticazione degli utenti e la confidenzialita' dei messaggi scambiati con l'interfaccia del Web service.
+                        il protocollo standard Web Services Security protocol <u>permette l'autenticazione degli utenti</u> e la <u>confidenzialita'</u> dei messaggi scambiati con l'interfaccia del Web service.
                     </p>
-                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/immagine2.jpg" alt="esempio di immagne"><p></p>
+                    <img id="test" class="img-fluid mt-2 mb-2" src="./photos/immagine2.jpg" alt="esempio di immagne">
                 </div>
                 <div class="text-center">
                     <a class="btn btn-primary btn-lg" href="javascript:history.back()"> Precedente </a> <a class="btn btn-primary btn-lg" href="../WebServices-4/index.html"> Successivo </a>

@@ -43,7 +43,7 @@
                             quella <b>orientata ai servizi</b>.
                         </p>
                     </p>
-                    <hr>
+                    <br><hr><br>
                     <h2 class="display-6">Ma cosa sono <b>MA</b> e <b>SOA</b>?</h2>
                     <h2 class="display-6"><b>M</b>onolith <b>A</b>rchitecture</h2>
                     <p class="fs-4">
@@ -52,18 +52,31 @@
                         Allo stesso modo, se un processo dovesse <b>smettere di funzionare</b>, l'intera architettura finirebbe per essere compromessa. <br>
                         Un'altro problema potrebbe derivare dal fatto che tutti i processi <b>utilizzano lo stesso database</b>, cosa che non accade nel mondo dei microservizi
                         (che possono avere ognuno il proprio database).
-                        Una tale complessità di modifica e una struttura così stringente limita quindi la sperimentazione e rende più difficile implementare nuove idee.
+                        <i>Una tale complessità di modifica e una struttura così stringente limita quindi la sperimentazione e rende più difficile implementare nuove idee.</i>
                     </p>
                     <img class="img-fluid mt-2 mb-2" src="./photos/architettura-monolitica1.png" alt="architettura-monolitica">
                     <img class="img-fluid mt-2 mb-2 text-right" src="./photos/architettura-monolitica2.png" alt="architettura-monolitica">
-                    <hr>
+                    <br><br><hr><br>
                     <h2 class="display-6"><b>S</b>ervice <b>O</b>riented <b>A</b>rchitecture</h2>
                     <p class="fs-4">
-                        Il concetto di SOA si basa su una serie di servizi quasi completamente indipendenti e disgiunti che però comunicano tra loro utilizzando 
-                        un canale comune, denominato <b>Enterprise Service Bus (ESB)</b>, all’interno del quale viaggiano i messaggi per la comunicazione. <br>
-                        Questa architettura, vantaggiosa rispetto a quella monolitica grazie alla separazione dei servizi, non è sempre la scelta migliore per via
-                        del <b>bus di comunicazione comune</b> e della <b>base dati condivisa</b> dai servizi.
+                        Il concetto di SOA si basa sul creare una suite di servizi quasi completamente indipendenti e disgiunti che però comunicano tra loro utilizzando 
+                        un canale comune, denominato <b>Enterprise Service Bus (ESB)</b>, all’interno del quale viaggiano i messaggi di comunicazione. <br>
+                        Questa architettura, vantaggiosa rispetto a quella monolitica grazie alla separazione dei servizi e che quindi permette di compilare, testare 
+                        e <b>modificare più servizi contemporaneamente</b>, svincolando i team IT dai cicli di sviluppo monolitici, non è sempre la scelta migliore per via
+                        del <b>bus di comunicazione comune</b> e della <b>base dati condivisa</b> dai servizi poichè entrambi costituiscono i cosiddetti <i>"punti di fail"</i>
+                        dell'intero sistema.
                     </p>
+                    <img class="img-fluid mt-2 mb-2" src="./photos/soa.png" alt="SOA">
+                    <img class="img-fluid mt-2 mb-2 text-right" src="./photos/microservices.png" alt="microservizi">
+                    <br><br><hr><br>
+                    <h2 class="display-6">Passaggio ai microservizi</h2>
+                    <p class="fs-4">
+                        I microservizi possono comunicare tra loro, in genere in <b>modalità stateless</b>, permettendo di realizzare app con una maggiore tolleranza
+                        di errore e meno dipendenti da un singolo ESB. Inoltre, comunicano tramite <b>interfacce di programmazione delle applicazioni</b> (API) indipendenti 
+                        dal linguaggio e ciò consente ai componenti del team di sviluppo di scegliere gli strumenti che preferiscono.
+                    </p>
+                    <img class="img-fluid mt-2 mb-2" src="./photos/microservizi.png" alt="microservizi">
+                    <img class="img-fluid mt-2 mb-2 text-right" src="./photos/api.png" alt="API">
                 </div>
                 <div class="text-center">
                     <a class="btn btn-primary btn-lg" href="../Microservices-2/index.html"> Successivo </a>

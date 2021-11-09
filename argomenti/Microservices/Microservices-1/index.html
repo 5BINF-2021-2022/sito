@@ -5,22 +5,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="../../../css/styles.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Modifica del titolo in base all'argomento inizio-->
     <title>Microservices</title>
-    <!--Modifica del titolo in base all'argomento fine-->
-    <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../../../icone/microservices.png"/>
-    <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
 </head>
 <body>
-    <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-lg-5">
             <a class="navbar-brand" href="../../../index.html">Architetture di Sistemi Distribuiti</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" aria-current="page" href="../../../index.html">Home</a></li>
@@ -31,44 +26,44 @@
             </div>
         </div>
     </nav>
-    <!-- Header-->
     <header class="py-5">
         <div class="container px-lg-5">
             <div class="p-4 p-lg-5 bg-light rounded-3 text-left">
                 <div class="m-4 m-lg-5" id="inizio">
-                    <!--DA QUI INIZIA LA MODIFICA-->
 
-                    <!--INSERIRE LE MODIFICHE ESCLUSIVAMENTE ALL'INTERNO DI QUESTO DIV SENZA MODIFICARNE GLI ATTRIBUTI E I TAG-->
-                    <!--Utilizzare esclusivamente i template forniti, non usare tag creati da zero. Moficare solamente quelli già esistenti o copiarli
-                    se si vuole aggiungere altro-->
-                    <!--Per ulteriori informazioni consultare il sito: https://www.w3schools.com/html/default.asp -->
-
-                    <!--Titolo (modificare anche titolo della pagina a riga 9) inizio-->
-                    <h1 class="display-5 fw-bold">Dalla Monolith Architecture (MA) <br> alla Service Oriented Architecture (SOA)</h1>
-                    <!--Titolo Fine-->
-
-                    <!--Sottotitolo inizio-->
-                    <h2 class="display-5">Differenze</h2>
-                    <!--Sottotitolo fine-->
-
-                    <!--Testo (paragrafo) inizio-->
+                    <h1 class="display-5 fw-bold">Monolith Architecture (MA) e<br> Service Oriented Architecture (SOA)</h1>
+                    <br>
+                    <h2 class="display-6">Descrizione generica</h2>
                     <p class="fs-4">
-                        <h1 class="display-6"><i>"I microservizi sono l'insieme delle funzioni di base di un'applicazione"</i></h1>
-                        Tutte le azioni effettuate su un sito web o un app sono gestite da piccoli servizi distinti. Effettuare ricerche, sfogliare le pagine 
+                        <h4><i>"I microservizi sono l'insieme delle funzioni di base di un'applicazione"</i></h4>
+                        <p class="fs-4">
+                            Tutte le azioni effettuate su un sito web o un app sono gestite da <b>piccoli servizi distinti</b> che collaborano tra loro (microservizi). <br>
+                            Effettuare ricerche interne, gestire un carrello o effettuare acquisti sono tutti validi esempi delle funzioni gestite dai microservizi. <br>
+                            Prima dell'uso dei microservizi, le architetture strutturali dei processi e dei servizi erano dapprima quella detta <b>monolitica</b> e successivamente
+                            quella <b>orientata ai servizi</b>.
+                        </p>
                     </p>
-                    <!--Testo (paragrafo) fine-->
-
-                    <!--Inserimento di un immagine inizio (ci sono 2 tag per le immagini, se ne volete una copiate solo uno dei tag)-->
-                        <!--NB: Le immagini vanno inserite nella cartella photos, devono essere jpg - jpeg - png, 
-                            dovrete modificare il percorso con il nome dell'immagine inserita-->
-                        <!--NBB: Il tag alt="esempio di immagine" serve a ripiazzare l'immagine nel caso non venisse caricata, 
-                            modificatelo con una scritta esplicativa dell'immagine-->
-                    <img id="test" class="img-fluid mt-2 mb-2" src="../sotto-argomento/photos/test.jpg" alt="esempio di immagne">
-                    <img id="test" class="img-fluid mt-2 mb-2" src="../sotto-argomento/photos/test2.jpg" alt="esempio di immagne">
-                    <!--Inserimento di un immagine fine-->
-
-                    <!-- Per inserire la sitografia andare a modificare il file fonti.html-->
-                    <!--QUI FINISCE LA MODIFICA-->
+                    <hr>
+                    <h2 class="display-6">Ma cosa sono <b>MA</b> e <b>SOA</b>?</h2>
+                    <h2 class="display-6"><b>M</b>onolith <b>A</b>rchitecture</h2>
+                    <p class="fs-4">
+                        Nelle architetture monolitiche tutti i processi sono <b>strettamente collegati tra loro</b> e vengono <b>come un singolo servizio</b>. <br>
+                        Ciò significa che se un processo dell’applicazione sperimenta un <b>picco nella richiesta</b>, è necessario ridimensionare l'intera architettura.
+                        Allo stesso modo, se un processo dovesse <b>smettere di funzionare</b>, l'intera architettura finirebbe per essere compromessa. <br>
+                        Un'altro problema potrebbe derivare dal fatto che tutti i processi <b>utilizzano lo stesso database</b>, cosa che non accade nel mondo dei microservizi
+                        (che possono avere ognuno il proprio database).
+                        Una tale complessità di modifica e una struttura così stringente limita quindi la sperimentazione e rende più difficile implementare nuove idee.
+                    </p>
+                    <img class="img-fluid mt-2 mb-2" src="./photos/architettura-monolitica1.png" alt="architettura-monolitica">
+                    <img class="img-fluid mt-2 mb-2 text-right" src="./photos/architettura-monolitica2.png" alt="architettura-monolitica">
+                    <hr>
+                    <h2 class="display-6"><b>S</b>ervice <b>O</b>riented <b>A</b>rchitecture</h2>
+                    <p class="fs-4">
+                        Il concetto di SOA si basa su una serie di servizi quasi completamente indipendenti e disgiunti che però comunicano tra loro utilizzando 
+                        un canale comune, denominato <b>Enterprise Service Bus (ESB)</b>, all’interno del quale viaggiano i messaggi per la comunicazione. <br>
+                        Questa architettura, vantaggiosa rispetto a quella monolitica grazie alla separazione dei servizi, non è sempre la scelta migliore per via
+                        del <b>bus di comunicazione comune</b> e della <b>base dati condivisa</b> dai servizi.
+                    </p>
                 </div>
                 <div class="text-center">
                     <a class="btn btn-primary btn-lg" href="../Microservices-2/index.html"> Successivo </a>

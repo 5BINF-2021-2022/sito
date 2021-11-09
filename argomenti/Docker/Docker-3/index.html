@@ -14,8 +14,9 @@
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script src="../../../js/scripts.js"></script>
 </head>
 <body>
     <!-- Responsive navbar-->
@@ -79,8 +80,14 @@
                     </p>
                     <p class="fs-4">
                         Le immagini diventano conteiner in fase di esecuzione sul Docker Engine.
-                        Il software containerizzato funzionerà sempre allo stesso modo, indipendentemente dall'infrastruttura, I container isolano il software dal suo ambiente e assicurano che funzioni in modo uniforme nonostante le differenze, ad esempio, tra <b>sviluppo e <a href="https://en.wikipedia.org/wiki/Deployment_environment#Staging">staging</a></b>.
+                        Il software containerizzato funzionerà sempre allo stesso modo, indipendentemente dall'infrastruttura, I container isolano il software dal suo ambiente e assicurano che funzioni in modo uniforme nonostante le differenze, ad esempio, tra <b>sviluppo e <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Staging" data-bs-content="Nella fase di staging si assembla il tutto e si simula un server live in modo da poter testare il corretto funzionamento del sito. Si crea quindi un ambiente separatato e indipendente dal server di produzione (il server accessibile dal pubblico) in modo da non correre rischi in caso di problemi." style="color: black">staging.</b></a>
                     </p>
+                    <script>
+                        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+                        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                        return new bootstrap.Popover(popoverTriggerEl)
+                        })
+                    </script>
                     <br />
                     <h2 class="display-6">Docker vs Virtual Macchine</h2>
                     <img id="test" class="img-fluid mt-2 mb-2" src="./photos/docker_vs_VM.png" alt="Docker VS Virtual Macchine">
